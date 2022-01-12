@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>LetsChat: Rooms</title>
+
+        <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="Kwitter_room.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap" rel="stylesheet">
+        <script src="kwitter_room.js"></script>
+    </head>
+
+    <body style="background-color: #9dddc8; color: white; font-family: 'PT Sans', sans-serif;" onmouseenter="welcome_user()">
+        <div class="container">
+            <br>
+            <button id="logout" onclick="logout()" class="glyphicon glyphicon-log-out btn btn-info"> LOGOUT</button>
+            <center>
+                <br><br><br><br>
+                <img style="height: 120px;" src="logo.png">
+                <h3 id="welcome"></h3>
+                <br>
+                <h4>CREATE A ROOM:</h4>
+                <input type="text" id="room_name" placeholder="New Room Name" class="form-control">
+                <br>
+                <button class="btn btn-warning" onclick="addRoom()">Add Room</button>
+                <h3>JOIN A ROOM:</h3>
+                <div id="output"></div>
+            </center>
+        </div>
+    </body>
+</html>
